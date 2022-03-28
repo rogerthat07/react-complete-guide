@@ -8,9 +8,13 @@ function App() {
     { title: "third", amount: 550, date: new Date(2021, 4, 14) }
   ];
 
+  const addExpenseHandler = (newExpenseData) => {
+    console.log(newExpenseData);
+  };
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense expenseHandler={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
